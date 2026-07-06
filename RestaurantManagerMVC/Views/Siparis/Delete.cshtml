@@ -1,0 +1,17 @@
+@model Siparis
+@{ ViewData["Title"] = "Siparis Sil"; }
+
+<h2>Siparis Sil</h2>
+
+<div class="card p-4" style="max-width:600px;">
+    <p class="text-danger">Bu siparisi silmek istediginize emin misiniz?</p>
+    <dl class="row">
+        <dt class="col-sm-3">Musteri</dt><dd class="col-sm-9">@Model.MusteriAdi</dd>
+        <dt class="col-sm-3">Yemek</dt><dd class="col-sm-9">@Model.YemekAdi</dd>
+        <dt class="col-sm-3">Adet</dt><dd class="col-sm-9">@Model.Adet</dd>
+    </dl>
+    <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+        <button type="submit" class="btn btn-danger">Evet, Sil</button>
+        <a asp-action="Index" class="btn btn-secondary">Vazgec</a>
+    </form>
+</div>

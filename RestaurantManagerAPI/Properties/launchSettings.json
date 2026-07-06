@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "RestaurantManagerAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:52717;http://localhost:52718"
+    }
+  }
+}

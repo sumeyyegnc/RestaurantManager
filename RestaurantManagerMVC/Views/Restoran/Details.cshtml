@@ -1,0 +1,15 @@
+@model Restoran
+@{ ViewData["Title"] = "Restoran Detayi"; }
+
+<h2>Restoran Detayi</h2>
+
+<div class="card p-4" style="max-width:600px;">
+    <dl class="row">
+        <dt class="col-sm-3">Id</dt><dd class="col-sm-9">@Model.Id</dd>
+        <dt class="col-sm-3">Ad</dt><dd class="col-sm-9">@Model.Ad</dd>
+        <dt class="col-sm-3">Adres</dt><dd class="col-sm-9">@Model.Adres</dd>
+        <dt class="col-sm-3">Telefon</dt><dd class="col-sm-9">@Model.Telefon</dd>
+        <dt class="col-sm-3">Sehir</dt><dd class="col-sm-9">@Model.Sehir</dd>
+    </dl>
+    <a asp-action="Index" class="btn btn-secondary">Listeye Don</a>
+</div>

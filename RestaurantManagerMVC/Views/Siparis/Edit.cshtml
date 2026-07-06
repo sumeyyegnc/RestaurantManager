@@ -1,0 +1,40 @@
+@model Siparis
+@{ ViewData["Title"] = "Siparis Duzenle"; }
+
+<h2>Siparis Duzenle</h2>
+
+<div class="card p-4" style="max-width:600px;">
+    <form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="Tarih" />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label asp-for="RestoranId" class="form-label"></label>
+            <select asp-for="RestoranId" asp-items="ViewBag.Restoranlar" class="form-select"></select>
+            <span asp-validation-for="RestoranId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="YemekId" class="form-label"></label>
+            <select asp-for="YemekId" asp-items="ViewBag.Yemekler" class="form-select"></select>
+            <span asp-validation-for="YemekId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="MusteriAdi" class="form-label"></label>
+            <input asp-for="MusteriAdi" class="form-control" />
+            <span asp-validation-for="MusteriAdi" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Adet" class="form-label"></label>
+            <input asp-for="Adet" class="form-control" type="number" />
+            <span asp-validation-for="Adet" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Durum" class="form-label"></label>
+            <select asp-for="Durum" asp-items="ViewBag.Durumlar" class="form-select"></select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guncelle</button>
+        <a asp-action="Index" class="btn btn-secondary">Vazgec</a>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+@model Restoran
+@{ ViewData["Title"] = "Restoran Sil"; }
+
+<h2>Restoran Sil</h2>
+
+<div class="card p-4" style="max-width:600px;">
+    <p class="text-danger">Bu restoranı silmek istediginize emin misiniz?</p>
+    <dl class="row">
+        <dt class="col-sm-3">Ad</dt><dd class="col-sm-9">@Model.Ad</dd>
+        <dt class="col-sm-3">Adres</dt><dd class="col-sm-9">@Model.Adres</dd>
+        <dt class="col-sm-3">Sehir</dt><dd class="col-sm-9">@Model.Sehir</dd>
+    </dl>
+    <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+        <button type="submit" class="btn btn-danger">Evet, Sil</button>
+        <a asp-action="Index" class="btn btn-secondary">Vazgec</a>
+    </form>
+</div>

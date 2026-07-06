@@ -1,0 +1,31 @@
+@model Restoran
+@{ ViewData["Title"] = "Yeni Restoran"; }
+
+<h2>Yeni Restoran Ekle</h2>
+
+<div class="card p-4" style="max-width:600px;">
+    <form asp-action="Create" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label asp-for="Ad" class="form-label"></label>
+            <input asp-for="Ad" class="form-control" />
+            <span asp-validation-for="Ad" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Adres" class="form-label"></label>
+            <input asp-for="Adres" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Telefon" class="form-label"></label>
+            <input asp-for="Telefon" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Sehir" class="form-label"></label>
+            <input asp-for="Sehir" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+        <a asp-action="Index" class="btn btn-secondary">Vazgec</a>
+    </form>
+</div>
