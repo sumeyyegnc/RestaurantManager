@@ -1,6 +1,6 @@
 # 🍽️ RestaurantManager API MVC Bridge
 
-RestaurantManager is a modern **ASP.NET Core MVC** application that communicates with a **RESTful ASP.NET Core Web API** to manage restaurant data. The project demonstrates a layered architecture by separating the presentation layer (MVC) from the business and data access layers (API).
+RestaurantManager is a modern **ASP.NET Core MVC** application that communicates with a ** ASP.NET Core Web API** to manage restaurant data. The project demonstrates a layered architecture by separating the presentation layer (MVC) from the business and data access layers (API).
 
 The Web API is built using **Dapper**, **ADO.NET**, and **SQL Server Stored Procedures**, providing a lightweight, high-performance data access solution.
 
